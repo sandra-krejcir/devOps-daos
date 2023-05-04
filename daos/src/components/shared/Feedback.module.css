@@ -1,0 +1,16 @@
+.feedback {
+	background-color: #353a5d;
+	color: white;
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+}
+
+.feedbackIcon img {
+	height: 40px;
+	width: 40px;
+}
+
+.feedbackText h4 {
+	color: inherit;
+}

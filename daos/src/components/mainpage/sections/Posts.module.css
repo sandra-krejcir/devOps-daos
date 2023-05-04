@@ -1,0 +1,17 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header a {
+	color: #bf1e2e;
+	font-weight: 700;
+}
+
