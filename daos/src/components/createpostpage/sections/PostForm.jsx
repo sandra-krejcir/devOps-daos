@@ -6,7 +6,6 @@ import TextField from "../../atoms/forms/TextField";
 import styles from "../../shared/Forms.module.css";
 import style from "../../atoms/forms/FormFields.module.css";
 import liststyles from "../../shared/PostList.module.css";
-import "../sections/postForm.css";
 import UnauthorisedModal from "../../atoms/posts/UnauthorisedModal";
 import Modal from "react-modal";
 
