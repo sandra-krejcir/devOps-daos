@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { Profile } from 'src/profiles/profiles.schema';
-export declare type PostDocument = Posts & Document;
+export type PostDocument = Posts & Document;
 export declare class Posts {
     title: string;
     author: Profile;
@@ -11,4 +11,4 @@ export declare class Posts {
     description: string;
     dateOfCreation: Date;
 }
-export declare const PostSchema: mongoose.Schema<Posts, mongoose.Model<Posts, any, any, any, any>, {}, {}, {}, {}, "type", Posts>;
+export declare const PostSchema: mongoose.Schema<Posts, mongoose.Model<Posts, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Posts>;

@@ -1,7 +1,7 @@
 import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { Profile } from 'src/profiles/profiles.schema';
-export declare type EnsembleDocument = Ensemble & Document;
+export type EnsembleDocument = Ensemble & Document;
 export declare class Ensemble {
     name: string;
     capacity: string;
@@ -11,4 +11,4 @@ export declare class Ensemble {
     creator: Profile;
     members: Profile[];
 }
-export declare const EnsembleSchema: mongoose.Schema<Ensemble, mongoose.Model<Ensemble, any, any, any, any>, {}, {}, {}, {}, "type", Ensemble>;
+export declare const EnsembleSchema: mongoose.Schema<Ensemble, mongoose.Model<Ensemble, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, Ensemble>;

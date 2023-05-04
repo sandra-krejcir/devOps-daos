@@ -23,7 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import { Document } from 'mongoose';
-export declare type ProfileDocument = Profile & Document;
+export type ProfileDocument = Profile & Document;
 export declare class Profile {
     name: string;
     surname: string;
@@ -32,4 +32,4 @@ export declare class Profile {
     password: string;
     dateOfCreation: Date;
 }
-export declare const ProfileSchema: import("mongoose").Schema<Profile, import("mongoose").Model<Profile, any, any, any, any>, {}, {}, {}, {}, "type", Profile>;
+export declare const ProfileSchema: import("mongoose").Schema<Profile, import("mongoose").Model<Profile, any, any, any, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, Profile>;
