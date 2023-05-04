@@ -1,0 +1,42 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: ./daos
+    image: daosfrontend
+    container_name: daosfrontcontainer
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    command: bash -c " npm run dev"
+  backend:
+    build: ./daos-backend
+    image: daosbackend
+    container_name: daosbackcontainer
+    restart: unless-stopped
+    ports:
+      - "3004:3004"
+    environment:
+      connection_string: mongodb+srv://bob:cphwebdevcdhs@cdhs.ini9gfr.mongodb.net/DAOS
+      port: 3004
+      jwt_secret: turtles
+      depends_on: mongodb
+      networks: backdbnetwork
+  mongodb:
+    image: mongo
+    container_name: mongodbcontainer
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbdata:/data/db
+    networks:
+      - backdbnetwork
+
+volumes:
+  dbdata:
+networks:
+  backdbnetwork:
+    driver: bridge
