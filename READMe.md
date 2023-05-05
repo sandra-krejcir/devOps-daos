@@ -130,3 +130,5 @@ driver: bridge
 10. The very last step is to run the docker-compose.yml file in order to create the image and all the containers inside it (frontend, backend and database containers).
 
 **To run the docker compose, open a new terminal in your VS Code and make sure you're situated in the paarent folder outside of the frontend and backend folders - the folder where you created the docker-compose.yml file. Then write in your terminal 'docker compose up' to build and run the docker containerizing. When the frontend container is created you will receive a localhost link in the terminal that you can click and try your now containerized app.**
+
+To stop the containers at any time, press CTRL + C at any time.
