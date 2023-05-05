@@ -108,7 +108,7 @@ container_name: daosbackcontainer <name you would like to give to the frontend c
 restart: unless-stopped <specifying if we want the container to restart or not>
 ports: - "3004:3004" <best practice to keep the 2 of the port numbers the same; the first one marks the port used by the local backend, and the second one marks the deocker container exposed port>
 environment: <here we specify to which database/ cloud server our database is connected to>
-connection_string: mongodb+srv://bob:cphwebdevcdhs@cdhs.ini9gfr.mongodb.net/DAOS <the database link/ connection string; in our case we are directly connecting to a MongoDB private database repository>
+connection_string: mongodb+srv://bob:****\*\*****.mongodb.net/DAOS <the database link/ connection string; in our case we are directly connecting to a MongoDB private database repository>
 port: 3004 <which port is being used by the backend; to which port the frontend is sending API calls and fetching the data from>
 jwt_secret: turtles <which word will be used instead of sensitive/ secret/ private data>
 depends_on: mongodb <what would the backend container build/ changes depend on >
