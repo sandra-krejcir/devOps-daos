@@ -50,7 +50,6 @@ export default function LoginForm({ isLoggedIn, setIsLoggedIn }) {
     setEmailAvailable("");
     if (formValues.email.length === 0) {
       setErrorEmail("Email cannot be empty");
-      console.log(errorEmail);
     } else {
       if (formValues.email.includes("@")) {
         setErrorEmail("");
@@ -74,10 +73,8 @@ export default function LoginForm({ isLoggedIn, setIsLoggedIn }) {
   function validatePassword() {
     if (formValues.password.length === 0) {
       setErrorPassword("Password cannot be empty!");
-      console.log(errorPassword);
     } else if (formValues.password.length < 8) {
       setErrorPassword("Password must be at least 8 characters!");
-      console.log(errorPassword);
     } else {
       setErrorPassword("");
     }
@@ -95,7 +92,6 @@ export default function LoginForm({ isLoggedIn, setIsLoggedIn }) {
     fetch("http://localhost:3004/auth/login", options)
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         if (response.statusCode === 401) {
           setErrorMsg(
             "Ops! Something went wrong. Please try to log in again with the correct email and password."

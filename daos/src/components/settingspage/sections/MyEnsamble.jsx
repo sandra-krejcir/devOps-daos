@@ -31,7 +31,6 @@ export default function MyEnsamble({
       .then((response) => response.json())
       .then((response) => {
         setApproveDelete(false);
-        console.log(response);
         fetchEnsambles();
       })
       .catch((err) => console.error(err));
@@ -51,7 +50,6 @@ export default function MyEnsamble({
       .then((response) => response.json())
       .then((response) => {
         setApproveLeave(false);
-        console.log(response);
         fetchEnsambles();
       })
       .catch((err) => console.error(err));

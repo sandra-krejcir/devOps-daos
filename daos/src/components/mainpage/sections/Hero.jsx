@@ -15,11 +15,7 @@ export default function Hero({ instrumentSelect, setInstrumentSelect }) {
             onChange={(evt) => setInstrumentSelect(evt.target.value)}
           />
           <Link to={"/posts"}>
-            <PrimaryButton
-              id="see-posts"
-              text="See posts"
-              onClick={() => console.log(instrumentSelect)}
-            />
+            <PrimaryButton id="see-posts" text="See posts" />
           </Link>
         </div>
       </div>

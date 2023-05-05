@@ -47,7 +47,6 @@ export default function PostItem({
         setErrorMsg("");
         setApproveDelete(true);
         setIsOpen(false);
-        console.log(approveDelete);
       } else {
         setIsOpen(true);
         setErrorMsg(
@@ -75,7 +74,6 @@ export default function PostItem({
       .then((response) => response.json())
       .then((response) => {
         setApproveDelete(false);
-        console.log(response);
         fetchPosts();
       })
       .catch((err) => console.error(err));

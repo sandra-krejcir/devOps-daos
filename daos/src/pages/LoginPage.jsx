@@ -4,7 +4,6 @@ import TheFooter from "../components/shared/TheFooter";
 import "./TheMain.css";
 
 export default function LoginPage({ isLoggedIn, setIsLoggedIn }) {
-  console.log(isLoggedIn);
   return (
     <div className="page-wrapper">
       <TheHeader isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />

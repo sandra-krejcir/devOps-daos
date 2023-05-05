@@ -63,7 +63,6 @@ function App() {
           date.dateOfCreation = newDate;
         }
         setPosts(postData);
-        console.log(postData);
       })
       .catch((err) => {
         console.error(err);
@@ -79,7 +78,6 @@ function App() {
     fetch("http://localhost:3004/ensambles")
       .then((response) => response.json())
       .then((ensambleData) => {
-        console.log(ensambleData);
         setEnsambles(ensambleData);
       })
       .catch((err) => console.error(err));

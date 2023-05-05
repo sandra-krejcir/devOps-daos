@@ -75,7 +75,6 @@ export default function SignupForm({ isLoggedIn }) {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         dispatch({
           ["name"]: "",
           ["surname"]: "",
@@ -108,10 +107,8 @@ export default function SignupForm({ isLoggedIn }) {
     setErrorName("");
     if (formValues.name.length === 0) {
       setErrorName("Name cannot be empty");
-      console.log(errorName);
     } else if (formValues.name.length === 1) {
       setErrorName("Name cannot be only 1 character!");
-      console.log(errorName);
     } else {
       setErrorName("");
     }
@@ -121,10 +118,8 @@ export default function SignupForm({ isLoggedIn }) {
     setErrorSurname("");
     if (formValues.surname.length === 0) {
       setErrorSurname("Surname cannot be empty");
-      console.log(errorSurname);
     } else if (formValues.surname.length === 1) {
       setErrorSurname("Surname cannot be only 1 character!");
-      console.log(errorSurname);
     } else {
       setErrorSurname("");
     }
@@ -135,7 +130,6 @@ export default function SignupForm({ isLoggedIn }) {
     setErrorEmail("");
     if (formValues.email.length === 0) {
       setErrorEmail("Email cannot be empty");
-      console.log(errorEmail);
     } else {
       if (formValues.email.includes("@")) {
         setErrorEmail("");
@@ -159,10 +153,8 @@ export default function SignupForm({ isLoggedIn }) {
     setErrorPassword("");
     if (formValues.password.length === 0) {
       setErrorPassword("Password cannot be empty!");
-      console.log(errorPassword);
     } else if (formValues.password.length < 8) {
       setErrorPassword("Password must be at least 8 characters!");
-      console.log(errorPassword);
     } else {
       setErrorPassword("");
     }

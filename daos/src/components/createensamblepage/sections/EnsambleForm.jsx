@@ -98,7 +98,6 @@ export default function EnsambleForm({ isLoggedIn, setIsLoggedIn }) {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setIsOpen(true);
         setErrorMsg(`Your ensamble has been created successfully!`);
       })
@@ -144,7 +143,6 @@ export default function EnsambleForm({ isLoggedIn, setIsLoggedIn }) {
   }
 
   function checkEnsambleCapacity() {
-    console.log(Number(formValues.capacity));
     if (formValues.capacity.length === 0) {
       setEnsambleCapacityError("Capacity cannot be empty");
     } else if (formValues.capacity === "0") {
@@ -161,7 +159,6 @@ export default function EnsambleForm({ isLoggedIn, setIsLoggedIn }) {
   }
 
   function checkZipCode() {
-    console.log(Number(formValues.location));
     if (formValues.location.length === 0) {
       setEnsambleLocationError("Zipcode cannot be empty");
     } else {

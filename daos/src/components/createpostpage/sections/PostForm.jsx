@@ -98,7 +98,6 @@ export default function PostForm({ isLoggedIn, setIsLoggedIn }) {
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log(response);
         setIsOpen(true);
         setErrorMsg(`Your post has been created successfully!`);
       })
@@ -123,7 +122,6 @@ export default function PostForm({ isLoggedIn, setIsLoggedIn }) {
   function checkTitle() {
     if (formValues.title.length === 0) {
       setErrorTitle("Title cannot be empty");
-      console.log(errorTitle);
     } else if (formValues.title.length < 5 || formValues.title.length > 36) {
       setErrorTitle("Title has to be min 5 characters and max 35 characters!");
     } else {
@@ -132,7 +130,6 @@ export default function PostForm({ isLoggedIn, setIsLoggedIn }) {
   }
 
   function checkZipCode() {
-    console.log(Number(formValues.location));
     if (formValues.location.length === 0) {
       setPostLocationError("Zipcode cannot be empty");
     } else {
@@ -159,7 +156,6 @@ export default function PostForm({ isLoggedIn, setIsLoggedIn }) {
   function checkDescription() {
     if (formValues.description.length === 0) {
       setErrorDescription("Description cannot be empty");
-      console.log(errorDescription);
     } else if (
       formValues.description.length < 5 ||
       formValues.description.length > 120

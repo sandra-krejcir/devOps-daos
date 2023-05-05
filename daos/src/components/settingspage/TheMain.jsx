@@ -63,7 +63,6 @@ export default function TheMain({
     })
       .then((response) => response.json())
       .then((response) => {
-        console.log("This is the data", response);
         const newDate = formatDate(response.dateOfCreation);
         response.dateOfCreation = newDate;
         localStorage.setItem("user", JSON.stringify(response));
@@ -81,17 +80,17 @@ export default function TheMain({
     <main>
       {userProfile && (
         <>
-		  <section className={styles.profileData}>
-          	<ProfileInfo userProfile={userProfile} />
-          	<UpdateForm
-				userProfile={userProfile}
-				getProfile={getProfile}
-				fetchPosts={fetchPosts}
-				fetchEnsambles={fetchEnsambles}
-				token={token}
-				isLoggedIn={isLoggedIn}
-          	/>
-		  </section>
+          <section className={styles.profileData}>
+            <ProfileInfo userProfile={userProfile} />
+            <UpdateForm
+              userProfile={userProfile}
+              getProfile={getProfile}
+              fetchPosts={fetchPosts}
+              fetchEnsambles={fetchEnsambles}
+              token={token}
+              isLoggedIn={isLoggedIn}
+            />
+          </section>
           <MyPosts
             posts={posts}
             fetchPosts={fetchPosts}

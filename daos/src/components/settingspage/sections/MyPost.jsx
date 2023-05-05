@@ -31,7 +31,6 @@ export default function MyPost({
       .then((response) => response.json())
       .then((response) => {
         setApproveDelete(false);
-        console.log(response);
         fetchPosts();
       })
       .catch((err) => console.error(err));

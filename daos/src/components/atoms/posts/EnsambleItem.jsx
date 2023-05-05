@@ -51,7 +51,6 @@ export default function EnsambleItem({
         setIsOpen(true);
         setErrorMsg("You cannot become a member of an ensamble you created!");
       } else {
-        console.log(members.length);
         if (members.length === Number(capacity)) {
           setErrorMsg(
             `The maximum capacity of this ensemble - ${capacity} - has been reached - all the places are filled. For possible vacancies, please contact the ensamble directly.`
@@ -68,7 +67,6 @@ export default function EnsambleItem({
           })
             .then((response) => response.json())
             .then((response) => {
-              console.log(response);
               if (response.statusCode === 403) {
                 setErrorMsg(response.message);
                 setIsOpen(true);
@@ -104,7 +102,7 @@ export default function EnsambleItem({
       .then((response) => response.json())
       .then((response) => {
         setApproveLeave(false);
-        console.log(response);
+
         fetchEnsambles();
       })
       .catch((err) => {

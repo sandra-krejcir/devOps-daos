@@ -17,7 +17,6 @@ export default function PostList({
     fetchPosts();
   }, []);
 
-  console.log(sortTerm);
   return (
     <div className={styles.postlist}>
       {posts
